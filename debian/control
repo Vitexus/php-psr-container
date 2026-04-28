@@ -1,0 +1,16 @@
+Source: php-psr-container
+Section: php
+Priority: optional
+Maintainer: Vítězslav Dvořák <info@vitexsoftware.cz>
+Build-Depends: debhelper-compat (= 13), jq
+Standards-Version: 4.6.2
+Homepage: https://github.com/php-fig/container
+Vcs-Git: https://github.com/Vitexus/php-psr-container.git
+Rules-Requires-Root: no
+
+Package: php-psr-container
+Architecture: all
+Depends: ${misc:Depends}, php-cli | php, composer
+Description: Common Container Interface (PHP FIG PSR-11)
+ This package holds the interface for PSR-11 (Container Interface),
+ enabling interoperability between dependency injection containers.
