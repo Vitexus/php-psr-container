@@ -9,5 +9,5 @@ override_dh_install:
 	mkdir -p debian/php-psr-container/usr/share/php/Psr/Container
 	cp -r src/. debian/php-psr-container/usr/share/php/Psr/Container/
 	install -m 644 debian/autoload.php debian/php-psr-container/usr/share/php/Psr/Container/autoload.php
-	sed -i "s|: 'unknown'|: '$(PKG_SOURCE)'|" debian/php-psr-container/usr/share/php/Psr/Container/autoload.php
-	sed -i "s|: '0.0.0'|: '$(PKG_VERSION)'|" debian/php-psr-container/usr/share/php/Psr/Container/autoload.php
+	sed -i "s|'unknown'|'$(PKG_SOURCE)'|" debian/php-psr-container/usr/share/php/Psr/Container/autoload.php
+	sed -i "s|'0.0.0'|'$(PKG_VERSION)'|" debian/php-psr-container/usr/share/php/Psr/Container/autoload.php
